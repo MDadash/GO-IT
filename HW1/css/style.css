@@ -6,6 +6,7 @@ body {
 	width: 512px;
 	margin:0 auto;
 	background: #fff;
+	padding:50px 50px 40px 50px;
 	border: solid #d6d6d6 1px;
 	-webkit-box-shadow: 0px 0px 5px 0px rgba(214,214,214,1);
 	-moz-box-shadow: 0px 0px 5px 0px rgba(214,214,214,1);
@@ -14,7 +15,6 @@ body {
 
 h2 {
 	text-align: center;
-	margin-top: 50px;
 }
 
 .imgWrap {
@@ -29,14 +29,12 @@ img {
 
 .box {
 	border-bottom: solid 1px #7b7b7b;
-	margin: 0 50px;
 	padding: 0 15px;
 	font-size: 18px;
 }
 
 .box:last-child {
 	border-bottom: none;
-	padding-bottom: 40px;
 }
 
 .p_align p:nth-child(odd) {
