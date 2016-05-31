@@ -96,7 +96,6 @@ body {
 }
 
 .imgWrap {
-	width: 497px;
 	text-align:center;
 	border: solid 1px #c8c8c8;
 	padding: 45px 88px 45px 88px;
@@ -108,7 +107,6 @@ body {
 }
 
 .description {
-	width:628px;
 	margin:0 auto;
 	padding: 40px 25px 0 25px;
 	line-height: 1.6;
@@ -124,7 +122,6 @@ body {
 	background-color: #e1e1e1;
 	padding: 12px 25px 12px 25px;
 	margin: 0 auto;
-	width: 915px;
 	margin-top: 60px;
 }
 
