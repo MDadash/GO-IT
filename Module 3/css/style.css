@@ -1,0 +1,143 @@
+html,
+body {
+	height:100%;
+}  /* для прижатия foter к низу страницы */
+
+body {
+	background-color: #f9f9f9;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+}
+
+.wrapper {
+	height: 100%;   /* для прижатия foter к низу страницы */
+	width: 965px;   
+	display: table;  /* для прижатия foter к низу страницы */
+	table-layout: fixed;  /* для прижатия foter к низу страницы */
+	margin: 0 auto;
+	padding: 50px 50px 60px 45px;
+	border: solid 1px #dbdbdb;
+	background-color: #fff;
+}
+
+.logoWrap {
+	width: 145px;
+	margin-bottom: 40px;
+}
+
+.logoWrap img {
+	width: 100%;
+}
+
+.menu {
+	background-image: -webkit-linear-gradient(top, #5E5E5E 0%, #444343 100%);
+	color: #fff;
+	margin-bottom: 40px;
+}
+
+.menu ul {
+	font-size: 0;  /* Убрать отступы между li (убираем горизонтальные отступы) */
+	line-height:0;  /* Убрать отступы между li (убираем вертикальные отступы в некоторых браузерах) */
+	letter-spacing: 0; /* Убрать отступы между li (для браузеров webkit) */
+	 
+}
+.menu .menu-item {
+	display: inline-block;
+	font-size: 15px;       /* Убрать отступы между li (возвращаем нормальные значения) \/ 3lines*/
+	line-height: normal;
+	letter-spacing: normal;
+}
+
+.menu .menu-item a {
+	display: block;
+	padding: 12px 25px 12px 25px;
+	border-right: 1px solid transparent;
+	border-left: 1px solid transparent;
+}
+
+.menu .menu-item a:hover{
+	background-image: -webkit-linear-gradient(top, #4A4A4A 0%, #2e2e2e 100%);
+	border-right: 1px solid #838383;
+	border-left: 1px solid #838383;
+}
+
+.container {
+	display: table-row;  /* для прижатия foter к низу страницы */
+	height: 100%;  /* для прижатия foter к низу страницы */
+	padding-bottom: 60px;
+}
+
+.sidebar {
+	width: 240px;
+	border: solid 1px #c8c8c8;
+	color: #656363;
+	float:left;
+}
+
+.sidebar .menu-item {
+	display: block;
+	padding: 11px 23px 11px 23px;
+	border-bottom: solid 1px #c8c8c8;
+}
+
+.sidebar .menu-item:last-child {
+	border-bottom: none;
+}
+
+.sidebar .menu-item:hover {
+	background-color: #f9f9f9;
+	padding-left: 35px;
+	color: #2c2c2c;
+}
+
+.main {
+	width: 675px;
+	float: right;
+}
+
+.imgWrap {
+	width: 497px;
+	text-align:center;
+	border: solid 1px #c8c8c8;
+	padding: 45px 88px 45px 88px;
+	
+}
+
+.imgWrap img {
+	width: 100%;;
+}
+
+.description {
+	width:628px;
+	margin:0 auto;
+	padding: 40px 25px 0 25px;
+	line-height: 1.6;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.footer {
+	background-color: #e1e1e1;
+	padding: 12px 25px 12px 25px;
+	margin: 0 auto;
+	width: 915px;
+	margin-top: 60px;
+}
+
+.footer a {
+	display: inline-block;
+	margin-left: 20px;
+	margin-right: 50px;
+} 
+.footer a:hover {
+	text-decoration: underline;
+}
+
+.footer p {
+	display: inline-block;
+	float: right;
+}
