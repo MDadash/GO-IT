@@ -1,0 +1,54 @@
+body {
+	background-color: #f0f0f0;
+}
+
+table {
+	border-collapse: collapse;
+	margin:100px auto;
+}
+
+td {
+	border: 5px solid black;
+	padding: 20px;
+}
+
+.bg_white {
+	background-color: white;
+}
+.bg_red {
+	background-color: red;
+	padding: 89px;
+}
+
+.bg_black {
+	background-color: black;
+	color: green;
+}
+
+.bg_blue {
+	background-color: blue;
+}
+
+.bg_yellow {
+	background-color: yellow;
+}
+
+.smallcell {
+	padding: 10px 20px;
+}
+
+.border-top {
+	border-top: transparent; 
+}
+
+.border-bottom {
+	border-bottom: transparent; 
+}
+
+.border-right {
+	border-right: transparent; 
+}
+
+.border-left {
+	border-left: transparent; 
+}
