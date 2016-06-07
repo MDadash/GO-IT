@@ -156,7 +156,7 @@ li.drop_box:hover ul li  {
 
 .article {
 	width: 50%;
-	/*margin: 0 auto;     нужно ли писать - работает и без него*/
+	margin: 0 auto;
 }
 
 .news {
