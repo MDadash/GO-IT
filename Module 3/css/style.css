@@ -41,14 +41,14 @@ body {
 	letter-spacing: 0; /* Убрать отступы между li (для браузеров webkit) */
 	 
 }
-.menu .menu-item {
+.menu li {
 	display: inline-block;
 	font-size: 15px;       /* Убрать отступы между li (возвращаем нормальные значения) \/ 3lines*/
 	line-height: normal;
 	letter-spacing: normal;
 }
 
-.menu .menu-item a {
+.menu li a {
 	display: block;
 	padding: 12px 25px 12px 25px;
 	border-right: 1px solid transparent;
@@ -74,17 +74,17 @@ body {
 	float:left;
 }
 
-.sidebar .menu-item {
+.sidebar li {
 	display: block;
 	padding: 11px 23px 11px 23px;
 	border-bottom: solid 1px #c8c8c8;
 }
 
-.sidebar .menu-item:last-child {
+.sidebar li:last-child {
 	border-bottom: none;
 }
 
-.sidebar .menu-item:hover {
+.sidebar li:hover {
 	background-color: #f9f9f9;
 	padding-left: 35px;
 	color: #2c2c2c;

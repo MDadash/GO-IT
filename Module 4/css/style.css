@@ -1,0 +1,200 @@
+* {
+	box-sizing: border-box;
+}
+
+.wrapper {
+	background-image: linear-gradient(to bottom, #128AA7 0%, #128AA7 28px, #5EF0FF 28px, #12CEE1 2.7%, #FFFFFF 179px, #FFFFFF 14.0%, #40C6D2 14.0%, #0C739F 100%), ;
+	background-color: #0C739F;
+}
+
+.container {
+	width: 1000px;
+	margin: 0 auto;
+	background: #fff;
+	box-shadow: 0px 0px 10px 1px rgba(3,29,40,1);
+	border-bottom: 3px solid #031d28;
+}
+
+.header {
+	padding: 12px 33px 0 28px;
+	position: relative;
+}
+
+.contacts, 
+.contacts a {
+	color: #128aa7;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.contacts {
+	position: absolute;
+	top: 12px;
+	right: 33px;
+}
+
+.contacts p {
+	margin: 3px 0 0 0;
+}
+
+.contacts p:first-child {
+	font-weight: bold;
+}
+
+.header ul li {
+	display: inline-block;
+	margin-left: 10px;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: center;
+	margin-left: 11px;
+}
+
+.header ul span {
+	display: block;
+	font-size: 10px;
+}
+
+.header ul {
+	position: absolute;
+	bottom: 10px;
+	right: 33px;
+	margin: 0;
+	font-size: 0;
+	line-height: 0;
+	letter-spacing: 0;
+}
+
+.banner {
+	height: 239px;
+	border-top: 1px solid #128aa7;
+	border-bottom: 1px solid #128aa7;
+	margin: 0;
+}
+
+.menu {
+	height: 30px;
+	position:relative;
+	z-index: 100;
+	font-size: 14px;
+}
+
+.menu .main-menu {
+	display: table;
+	width: 1000px;
+	height: 30px;
+	background-image: linear-gradient(to bottom, #373737 0%, #303030 100%);
+	color: #fff;
+	border-bottom: 1px solid black;
+	box-shadow: 0px 2px 5px 1px rgba(48,48,48,0.75);
+	margin:0;
+}
+
+.menu .main-menu > li {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.menu a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.main-menu .drop_box > a {
+	position: relative;
+}
+
+.main-menu .drop_box > a:after {
+	content:"";
+	position: absolute;
+	top: 7px;
+	right: -15px;
+	border: 3px solid transparent;
+	border-top: 5px solid #fff;
+}
+
+li.drop_box {
+	position: relative;
+}
+
+li.drop_box:nth-child(3) {
+	padding-left: 11px;
+}
+
+li.drop_box ul {
+	display: none;
+	position: absolute;
+	background-image: linear-gradient(to bottom, #373737 0%, #303030 100%);
+	top: 30px;
+	left: 30px;
+	width: 100%;
+	padding: 0;
+	opacity: 0;
+	box-shadow: 0px 4px 5px 1px rgba(64,64,64,1);
+}
+
+li.drop_box ul li {
+	padding: 5px;
+	text-align: left;
+	padding: 5px 10px 5px 10px;
+}
+
+li.drop_box:hover ul,
+li.drop_box:hover ul li  {
+	display: block;
+	opacity: 1;
+	
+}
+
+.info {
+	float: left;
+	width: auto;
+	background-color: #edeef0;
+	border-right: 1px solid #c7cacf ;
+}
+
+.article {
+	width: 50%;
+	/*margin: 0 auto;     нужно ли писать - работает и без него*/
+}
+
+.news {
+	float: right;
+	width: auto;
+	background-color: #edeef0;
+	border-left: 1px solid #c7cacf;
+}
+
+.main div {
+	color: #424c43;
+	padding: 0 25px 0 15px;
+	padding-bottom: 500px;
+	margin-bottom:-500px;
+}
+
+.main div p {
+	margin: 10px;
+}
+
+.main h3 {
+	text-align: center;
+}
+
+.main {
+	overflow: hidden;
+	font-size: 14px;
+}
+
+.main:after {
+	content:"";
+	display:table;
+	clear: both;
+}
+
+.copyright {
+	font-size: 12px;
+	color: #fff;
+	text-align: center;
+	padding: 8px 0 8px 0;
+}

@@ -4,25 +4,26 @@ body {
 
 table {
 	border-collapse: collapse;
-	margin:100px auto;
+	border: hidden;
+	margin: 100px auto;
 }
 
 td {
 	border: 5px solid black;
-	padding: 20px;
+	height: 30px;
+	width: 30px;
 }
 
 .bg_white {
 	background-color: white;
 }
+
 .bg_red {
 	background-color: red;
-	padding: 89px;
 }
 
 .bg_black {
 	background-color: black;
-	color: green;
 }
 
 .bg_blue {
@@ -33,22 +34,13 @@ td {
 	background-color: yellow;
 }
 
-.smallcell {
-	padding: 10px 20px;
+.thin td {
+	height: 15px;
 }
 
-.border-top {
-	border-top: transparent; 
+.double-h {
+	height: 60px;
 }
 
-.border-bottom {
-	border-bottom: transparent; 
-}
-
-.border-right {
-	border-right: transparent; 
-}
-
-.border-left {
-	border-left: transparent; 
-}
+.double-w {
+	width: 60px;
