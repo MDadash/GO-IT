@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-	background-image: linear-gradient(to bottom, #128AA7 0%, #128AA7 28px, #5EF0FF 28px, #12CEE1 2.7%, #FFFFFF 179px, #FFFFFF 14.0%, #40C6D2 14.0%, #0C739F 100%), ;
+	background-image: linear-gradient(to bottom, #128AA7 0%, #128AA7 28px, #5EF0FF 28px, #12CEE1 2.7%, #FFFFFF 179px, #FFFFFF 14.0%, #40C6D2 14.0%, #0C739F 100%);
 	background-color: #0C739F;
 }
 
@@ -88,6 +88,7 @@
 	border-bottom: 1px solid black;
 	box-shadow: 0px 2px 5px 1px rgba(48,48,48,0.75);
 	margin:0;
+	border-spacing: 0; 
 }
 
 .menu .main-menu > li {
@@ -144,7 +145,6 @@ li.drop_box:hover ul,
 li.drop_box:hover ul li  {
 	display: block;
 	opacity: 1;
-	
 }
 
 .info {
@@ -156,7 +156,7 @@ li.drop_box:hover ul li  {
 
 .article {
 	width: 50%;
-	/*margin: 0 auto;     нужно ли писать - работает и без него*/
+	margin: 0 auto;
 }
 
 .news {
