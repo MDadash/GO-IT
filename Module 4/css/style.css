@@ -66,14 +66,15 @@
 }
 
 .banner {
-	height: 239px;
 	border-top: 1px solid #128aa7;
 	border-bottom: 1px solid #128aa7;
+	margin: 0 auto;
+	padding: 0;
+}
+.banner img {
 	margin: 0;
 }
-
 .menu {
-	height: 30px;
 	position:relative;
 	z-index: 100;
 	font-size: 14px;
@@ -82,7 +83,6 @@
 .menu .main-menu {
 	display: table;
 	width: 1000px;
-	height: 30px;
 	background-image: linear-gradient(to bottom, #373737 0%, #303030 100%);
 	color: #fff;
 	border-bottom: 1px solid black;
@@ -92,6 +92,7 @@
 }
 
 .menu .main-menu > li {
+	height: 30px;
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
@@ -127,7 +128,7 @@ li.drop_box ul {
 	display: none;
 	position: absolute;
 	background-image: linear-gradient(to bottom, #373737 0%, #303030 100%);
-	top: 30px;
+	top: 31px;
 	left: 30px;
 	width: 100%;
 	padding: 0;
@@ -149,7 +150,7 @@ li.drop_box:hover ul li  {
 
 .info {
 	float: left;
-	width: auto;
+	width: 250px;
 	background-color: #edeef0;
 	border-right: 1px solid #c7cacf ;
 }
@@ -161,7 +162,7 @@ li.drop_box:hover ul li  {
 
 .news {
 	float: right;
-	width: auto;
+	width: 250px;
 	background-color: #edeef0;
 	border-left: 1px solid #c7cacf;
 }
@@ -169,8 +170,8 @@ li.drop_box:hover ul li  {
 .main div {
 	color: #424c43;
 	padding: 0 25px 0 15px;
-	padding-bottom: 500px;
-	margin-bottom:-500px;
+	padding-bottom: 5000px;
+	margin-bottom:-5000px;
 }
 
 .main div p {
