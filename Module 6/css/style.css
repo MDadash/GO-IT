@@ -88,9 +88,10 @@
 	font-size: 11px;
 	margin: 1px 0 0;
 	width: 33px;
-}
-.contacts-panel .autorization button:focus {
 	outline: none;
+}
+.contacts-panel .autorization button:hover {
+	cursor: pointer;
 }
 .contacts-panel .autorization p:first-of-type {
 	padding-left: 4px;
@@ -258,6 +259,7 @@ header .banner {
 	font-style: italic;
 	text-transform: lowercase;
 	outline: none;
+	cursor: pointer;
 }
 .first-form h1 {
 	margin: 0 70px 0 68px;
@@ -402,7 +404,7 @@ main {
 }
 .inside-menu li:hover {
 	color: #0c3256;
-	font-size: 14px;
+	font-size: 13px;
 	font-weight: bold;
 	font-style: italic;
 	text-decoration: underline;
