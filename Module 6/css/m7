@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>m7</title>
+
+</head>
+<body>
+	<header class="header">
+	<div class="wrapper">
+		<img class="header__logo" src="pingbuller_logo" alt="">
+		<ul class="menu">
+			<li class="menu__Item menu__Item--cure"><a class="Menu__Link" href="#">Home</a></li>
+			<li class="menu__Item"><a class="Menu__Link" href="#">About</a></li>
+			<li class="menu__Item"><a class="Menu__Link" href="#">Blog</a></li>
+			<li class="menu__Item"><a class="Menu__Link" href="#">Products</a></li>
+			<li class="menu__Item"><a class="Menu__Link" href="#">Lorem</a></li>
+			<li class="menu__Item"><a class="Menu__Link" href="#">Ipsum</a></li>
+		</ul>
+		<div class="slider">
+			<h2  class="slider__mainHead">
+				Lorem Ipsum
+			</h2>
+			<h4 class="slider__secHead">
+				Second Header
+			</h4>
+			<p class="slider__text">
+			Some text
+			</p>
+			<img class="slider__img" src="" alt="">
+		</div>
+	</div>
+	</header>
+		<section class="colums colunms--3 columns--gradient">
+		<div class="wrapper">
+			<div class="columns__col"></div>
+			<div class="columns__col"></div>
+			<div class="columns__col"></div>
+		</div>
+		</section>
+		<section class="columns columns--2">
+			
+		</section>
+		<div class="sponsor">
+			
+		</div>
+		<section class="columns columns--3 columns--grey">
+			
+		</section>
+</body>
+</html>
+
+
+
+<style>
+	.wrapper {
+		width: 320px;
+		margin: auto;
+	}
+	.menu-item {
+		display: none;
+	}
+	.menu-item--curr {
+		display: block;
+	}
+	menu:hover .menu-item {
+		display:block;
+	}
+</style>
