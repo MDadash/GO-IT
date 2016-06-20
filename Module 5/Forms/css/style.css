@@ -9,18 +9,15 @@
     font-weight: normal;
     font-style: normal;
 }
-
 body {
 	background-color: #eeeeee;
 	font-family: 'helveticaneuecyrlight', Arial, "Nimbus Sans L", sans-serif;
 }
-
 .wrapper {
 	width: 100%;
 	height: 100%;
 	font-size: 14px;
 }
-
 .header {
 	background-image: url(../img/noize.png);
 	width: 100%;
@@ -29,26 +26,20 @@ body {
 	flex-flow: row wrap;  /* Сдвигает элементы к концу строки по главной оси */
 	justify-content: flex-end;
 }
-
 .menu {
 	display: table;
 	table-layout: fixed;
 	color: #60b5ed;
-	/*border-right: 1px solid #52a0da;*/
 }
-
 .menu li {
 	display: table-cell;
 	padding: 11px 10px ;
 }
-
 .menu li:hover {
 	background-color: #4eabda;
 	color: #fff;
-	
 }
-
-.Minhas-Ofertas {
+.block-with-flagpicture {
 	border-left: 1px solid #52a0da;
 	color: #fff;
 	padding: 3px 20px 2px 20px;
@@ -56,13 +47,11 @@ body {
 	position: relative;
 	margin: 3px 0;
 }
-
-.Minhas-Ofertas div {
+.block-with-flagpicture div {
 	position: absolute;
 	top: 8px;
 	left: 48px;
 }
-
 .entar {
 	width: 190px;
 	background-image: linear-gradient(to bottom, #51b1dc 0%, #2E7AC4 100%);
@@ -70,15 +59,12 @@ body {
 	border: 1px solid #52a0da;
 	padding: 10px 12px;
 }
-
 .entar a{
 	text-decoration: underline;
 }
-
 .entar a:hover {
 	color: #074d8b;
 }
-
 .main {
 	height: 100%;
 	background-image: url(../img/bg.jpg);
@@ -90,11 +76,9 @@ body {
 	justify-content: center;
 	align-items: center;
 }
-
 .form_wrap {
 	width: 560px;
 }
-
 .form_head {
 	font-size: 24px;
 	color: #fff;
@@ -103,21 +87,66 @@ body {
 	text-align: center;
 	padding: 22px 0;
 }
-
 .form_body {
 	background-color: rgba(0, 0, 0, 0.5);
 	padding: 36px 0 20px 0;
 	text-align: center;
 }
-
+.fb-wrap {
+	margin:0;
+	padding:0;
+}
 .fb_button {
 	border: none;
-	background: url(../img/fb__button.png) no-repeat transparent;
-	width: 276px;
+	border-radius: 3px;
+	background-image: linear-gradient(to bottom, #758AB7 0%, #3D5698 2px, #334063 100%);
+	width: 238px;
 	height: 35px;
+	position: relative;
 	outline: none;
+	cursor: pointer;
+	color: #fff;
+	padding:0 0px 0 0;
 }
-
+.fb_button:hover {
+	background-image: linear-gradient(to top, #758AB7 0%, #3D5698 2px, #334063 100%);
+}
+.fb_button:before {
+	content:"";
+	width: 36px;
+	height: 35px;
+	position: absolute;
+	top:0;
+	left:0;
+	border-right: 1px solid #223c6d;
+	box-shadow: 1px 0 0 #4c68a9;
+	background-image: url(../img/fb-logo.png);
+	background-size: 9px 20px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+ .fb_button span {
+	position: relative;
+}
+.fb_button span:after, .fb_button span:before {
+	left: 20px;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+}
+.fb_button span:after {
+	border-left-color: #3D5698;
+	border-width: 3px;
+	margin-top: -3px;
+}
+.fb_button span:before {
+	border-left-color: #ffffff;
+	border-width: 6px;
+	margin-top: -6px;
+}
 .form_body .label {
 	color: #999999;
 	font-size: 14px;
@@ -125,7 +154,6 @@ body {
 	position: relative;
 	margin: 33px 0 31px;
 }
-
 .form_body .label:before {
 	content:"";
 	display: block;
@@ -136,7 +164,6 @@ body {
 	top: 6px;
 	right: 25px;
 }
-
 .form_body .label:after {
 	content:"";
 	display: block;
@@ -147,7 +174,6 @@ body {
 	bottom: 7px;
 	left: 25px;
 }
-
 .input_type_text input {
 	width: 276px;
 	padding: 10px 0 10px 18px;
@@ -156,16 +182,13 @@ body {
 	border-bottom: 1px solid #484847;
 	margin-bottom: 20px;
 }
-
 .input_type_text input:focus {
 	background-color: #1b5288;
 	box-shadow: 0px 0px 10px 0px rgba(214,214,214,1);
 }
-
 .input_checkbox {
 	color: #c2c2c1;
 }
-
 .button button {
 	background-image: linear-gradient(to bottom, #4FADDB 0%, #2e7ac4 100%);
 	border: 1px solid #48a3d7;
@@ -175,8 +198,11 @@ body {
 	color: #fff;
 	font-size: 14px;
 	margin: 23px 0 20px;
+	cursor: pointer;
 }
-
+.button button:hover {
+	background-image: linear-gradient(to top, #4FADDB 0%, #2e7ac4 100%);
+}
 .form_body .agree_pp {
 	color: #c2c2c1;
 	font-size: 11px;
