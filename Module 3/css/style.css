@@ -39,8 +39,8 @@ body {
 	font-size: 0;  /* Убрать отступы между li (убираем горизонтальные отступы) */
 	line-height:0;  /* Убрать отступы между li (убираем вертикальные отступы в некоторых браузерах) */
 	letter-spacing: 0; /* Убрать отступы между li (для браузеров webkit) */
-	 
 }
+
 .menu li {
 	display: inline-block;
 	font-size: 15px;       /* Убрать отступы между li (возвращаем нормальные значения) \/ 3lines*/
@@ -55,7 +55,7 @@ body {
 	border-left: 1px solid transparent;
 }
 
-.menu .menu-item a:hover{
+.menu li a:hover{
 	background-image: -webkit-linear-gradient(top, #4A4A4A 0%, #2e2e2e 100%);
 	border-right: 1px solid #838383;
 	border-left: 1px solid #838383;
@@ -99,7 +99,6 @@ body {
 	text-align:center;
 	border: solid 1px #c8c8c8;
 	padding: 45px 88px 45px 88px;
-	
 }
 
 .imgWrap img {
@@ -116,7 +115,7 @@ body {
     content: "";
     display: table;
     clear: both;
-  }
+ }
 
 .footer {
 	background-color: #e1e1e1;
@@ -130,6 +129,7 @@ body {
 	margin-left: 20px;
 	margin-right: 50px;
 } 
+
 .footer a:hover {
 	text-decoration: underline;
 }
