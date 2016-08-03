@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Kinetik Energy</title>
+	<script>
+		var unitOfSpeed = confirm('If unit of speed is meters per second click "Ok"\nIf unit of spped is kilometres per hour click "Cancel"');
+		
+		function findKineticEnergy (m, v) {
+			return (m * Math.pow(v, 2)) / 2;
+		}
+
+		var mass = prompt('To calculate kinetic energy, please, enter mass (kg) of a moving object...');
+		var speed = prompt('... And also enter object`s speed!');
+		
+		if (unitOfSpeed == true) {
+			speed = speed * 1000 / 3600;
+		}
+
+		console.log(findKineticEnergy(mass, speed));
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

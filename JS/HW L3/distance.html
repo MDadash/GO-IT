@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculate distance</title>
+	<script>
+		function calculateDistanceForDimension2 (arrayPointA, arrayPointB) {
+			return Math.sqrt(Math.pow((arrayPointB[0] - arrayPointA[0]), 2) + Math.pow((arrayPointB[1] - arrayPointA[1]), 2));
+		}
+
+		function calculateDistanceForDimension3 (arrayPointA, arrayPointB) {
+			return Math.sqrt(Math.pow((arrayPointB[0] - arrayPointA[0]), 2) + Math.pow((arrayPointB[1] - arrayPointA[1]), 2) + Math.pow((arrayPointB[2] - arrayPointA[2]), 2));
+		}
+
+		var pointACoordinates = [];
+		var pointBCoordinates = [];
+		var dimension = prompt("Select dimension (2 or 3)");
+
+		if (dimension == 2 || dimension == 3) {
+			for (var i = 0; i < dimension; i++) {
+				pointACoordinates.push(prompt('Enter coordinates of point A'));
+			}
+			for (var i = 0; i < dimension; i++) {
+				pointBCoordinates.push(prompt('Enter coordinates of point B'));
+			}
+
+			if (dimension == 2) {
+				console.log(calculateDistanceForDimension2(pointACoordinates, pointBCoordinates));
+			} else {
+				console.log(calculateDistanceForDimension3(pointACoordinates, pointBCoordinates));
+			} 
+		} else {
+			alert('Enter correct dimension!');
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

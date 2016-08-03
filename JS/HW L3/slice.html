@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Slice</title>
+	<script>
+
+
+		var notSlicedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+		function sliceArray (array, begin, end) {
+			var slicedArray = [];
+
+			if (begin == undefined && end == undefined) {
+				begin = 0;
+				end = array.length;
+			} else if (begin == isNaN || begin == undefined || (begin < 0 && Math.abs(begin) > array.length)) {
+				begin = 0;
+			} else if (begin < 0 && end == undefined) {
+				begin = array.length + begin;
+				end = array.length;
+			} else if (begin < 0) {
+				begin = array.length + begin;
+			} else if (end > array.length || (begin > 0 && end == undefined)) {
+				end = array.length;
+			} 
+
+			for (var i = begin; i < end; i++) {
+					slicedArray.push(array[i]);
+			}
+			
+			return slicedArray;
+		}
+
+
+
+		console.log(sliceArray(notSlicedArray,  2, 6), notSlicedArray.slice(2, 6));
+		console.log(sliceArray(notSlicedArray,  6, 2), notSlicedArray.slice(6, 2));
+		console.log(sliceArray(notSlicedArray,  -3, 3), notSlicedArray.slice(-3, 3));
+		console.log(sliceArray(notSlicedArray,  -15, 2), notSlicedArray.slice(-15, 2));
+		console.log(sliceArray(notSlicedArray,  15, 2), notSlicedArray.slice(15, 2));
+		console.log(sliceArray(notSlicedArray), notSlicedArray.slice());
+		console.log(sliceArray(notSlicedArray, 0, 2), notSlicedArray.slice(0, 2));
+		console.log(sliceArray(notSlicedArray,  5), notSlicedArray.slice(5));
+		console.log(sliceArray(notSlicedArray,  -6), notSlicedArray.slice(-6));
+		console.log(sliceArray(notSlicedArray,  -5, 2), notSlicedArray.slice(-5, 2));
+		console.log(sliceArray(notSlicedArray,  -5, 6), notSlicedArray.slice(-5, 6));
+		console.log(sliceArray(notSlicedArray,  -5, 10), notSlicedArray.slice(-5, 10));
+		console.log(sliceArray(notSlicedArray,  5, 15), notSlicedArray.slice(5, 15));
+		console.log(sliceArray(notSlicedArray,  5,0), notSlicedArray.slice(5, 0));
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

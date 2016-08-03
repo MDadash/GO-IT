@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IndexOf</title>
+	<script>
+		var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+		function findIndexOfElement (array, element, fromIndex) {
+			if (fromIndex == isNaN || fromIndex == undefined) {
+				fromIndex = 0;
+			} else if (fromIndex < 0) {
+				fromIndex = array.length + fromIndex;
+			}
+
+			for (var i = fromIndex; i < array.length; i++) {
+				if (element == array[i]) {
+					return i;
+				}
+			}
+			return -1;
+		}
+
+		console.log(findIndexOfElement(array, 8), array.indexOf(8));
+		console.log(findIndexOfElement(array, 8, 0), array.indexOf(8, 0));
+		console.log(findIndexOfElement(array, 8, 3), array.indexOf(8, 3));
+		console.log(findIndexOfElement(array, 8, -2), array.indexOf(8, -2));
+		console.log(findIndexOfElement(array, 8, -3), array.indexOf(8, -3));
+		console.log(findIndexOfElement(array, 8, -10), array.indexOf(8, -10));
+		console.log(findIndexOfElement(array, 8, -11), array.indexOf(8, -11));
+		console.log(findIndexOfElement(array, 8, 10), array.indexOf(8, 10));
+		console.log(findIndexOfElement(array, 8, 15), array.indexOf(8, 15));
+		console.log(findIndexOfElement(array), array.indexOf());
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

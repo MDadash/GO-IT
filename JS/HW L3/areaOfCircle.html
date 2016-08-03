@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Area of circle</title>
+	<script>
+		var units = confirm('If defined data is length of circle radius ckick "Ok".\nIf defined data is length of circle diameter click "Cancel"');
+
+		function calculateAreaOfCircle (radius) {
+			return Math.PI * Math.pow(radius, 2);
+		}
+
+		if (units) {
+			var radius = prompt('Enter radius');
+		} else {
+			var diameter = prompt('Enter diameter');
+			var radius = diameter / 2;
+		}
+		console.log(calculateAreaOfCircle(radius))
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

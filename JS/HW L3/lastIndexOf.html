@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LastIndexOf</title>
+	<script>
+		var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+		function findLastIndexOfElement (array, element, fromIndex) {
+			if (fromIndex == isNaN || fromIndex == undefined) {
+				fromIndex = array.length - 1;
+			} else if (fromIndex < 0) {
+				fromIndex = array.length + fromIndex;
+			}
+
+			for (var i = fromIndex; i >= 0; i--) {
+				if (element == array[i]) {
+					return i;
+				}
+			}
+			return -1;
+		}
+
+		console.log(findLastIndexOfElement(array, 8), array.lastIndexOf(8));
+		console.log(findLastIndexOfElement(array, 8, 0), array.lastIndexOf(8, 0));
+		console.log(findLastIndexOfElement(array, 8, 3), array.lastIndexOf(8, 3));
+		console.log(findLastIndexOfElement(array, 8, -2), array.lastIndexOf(8, -2));
+		console.log(findLastIndexOfElement(array, 8, -4), array.lastIndexOf(8, -4));
+		console.log(findLastIndexOfElement(array, 4, -6), array.lastIndexOf(4, -6));
+		console.log(findLastIndexOfElement(array, 8, -10), array.lastIndexOf(8, -10));
+		console.log(findLastIndexOfElement(array, 8, -11), array.lastIndexOf(8, -11));
+		console.log(findLastIndexOfElement(array, 8, 10), array.lastIndexOf(8, 10));
+		console.log(findLastIndexOfElement(array, 8, 15), array.lastIndexOf(8, 15));
+		console.log(findLastIndexOfElement(array), array.lastIndexOf());
+		console.log(findLastIndexOfElement(array, -6), array.lastIndexOf(-6));
+		console.log(findLastIndexOfElement(array, 0), array.lastIndexOf(0));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

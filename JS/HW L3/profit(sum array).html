@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sum arrays (profit)</title>
+	<script>
+		var collectionOfProfits = [];
+		var quantityOfOperands = prompt('Enter quantity of profits');
+		function fillArray(array) {
+			for (var i = 0; array.length < quantityOfOperands; i++) {
+				array.push(+prompt('Enter values of your profits'))
+			}
+			return array;
+		}
+	
+		function sumProfits(array) {
+			var sum = 0;
+			for (i = 0; i < array.length; i++) {
+				sum = sum + array[i];
+			}
+			return sum;
+		}
+		console.log(sumProfits(fillArray(collectionOfProfits)));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
