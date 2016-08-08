@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>heartJoin</title>
+	<script>
+		Array.prototype.heartJoin = function () {
+			var stringFromArray = this.toString();
+			var index = -1;
+
+			while ((index = stringFromArray.indexOf(',', index+1)) != -1) {
+				stringFromArray = stringFromArray.replace(',', '❤');
+			}
+
+			return stringFromArray;
+		}
+
+		console.log([].heartJoin() === "")
+		console.log([1,2,3].heartJoin() == "1❤2❤3");
+		console.log(['sergii', 'javascript'].heartJoin() == "sergii❤javascript");
+		console.log(['vasya', 'tanya'].heartJoin() == "vasya❤tanya");
+		console.log(['миша', 'маша','сережа'].heartJoin() == "миша❤маша❤сережа");
+		console.log(["",0,3,5,""].heartJoin() === "❤0❤3❤5❤");
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

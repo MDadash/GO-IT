@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Classes, prototypes</title>
+	<script src="Persons.js"></script>
+	<script>
+		var locationsArray = ['home', 'bar', 'shop', 'cafe', 'hospital', 'school', 'work', 'park', 'zoo', 'swimmingpool'];
+		var genderArray = ['male', 'female'];
+		var firstNamesArray = [];
+		var lastNamesArray = [];
+		for (var i = 0; i < personsArray.length; i++) {
+			firstNamesArray.push(personsArray[i]["Default Contact First name"]);
+		}
+		for (var i = 0; i < personsArray.length; i++) {
+			lastNamesArray.push(personsArray[i]["Default Contact Last name"]);
+		}
+		
+		var resultPerson = [];
+		var resultLocations = [];
+			
+		function Person(firstName, lastName, gender) {
+			this.firstName = firstName;
+			this.lastName = lastName;
+			this.gender = gender;
+		}
+
+		function Location(name, owner, visitors) {
+			this.name = name;
+			this.owner = owner;
+			this.visitors = [];
+		}
+
+		Person.prototype = {
+			location: 'location',
+			walkTo: function(location) {
+				this.location = location;
+			}
+		}
+
+		for (var i = 0; i < 50; i++) {
+			var nameRandom = Math.floor(Math.random() * firstNamesArray.length);
+			var genderRandom = Math.floor(Math.random() * genderArray.length);
+			
+			resultPerson[i] = new Person(firstNamesArray[nameRandom], lastNamesArray[nameRandom], genderArray[genderRandom]);
+
+			firstNamesArray.splice(nameRandom, 1);
+			lastNamesArray.splice(nameRandom, 1);
+		}
+		// console.log(resultPerson);
+
+		for (var i = 0; i < 10; i++) {
+			var locationRandom = Math.floor(Math.random() * locationsArray.length);
+			var ownerRandom = Math.floor(Math.random() * resultPerson.length);
+			resultLocations[i] = new Location(locationsArray[locationRandom], resultPerson[ownerRandom])
+			locationsArray.splice(locationRandom, 1);
+		}
+		console.log(resultLocations);
+
+		for (var i = 0; i < 50; i++)  {
+			var locationRandom = Math.floor(Math.random() * resultLocations.length)
+			var walkToLocation = resultLocations[locationRandom]['name'];
+			resultPerson[i].walkTo(walkToLocation);
+			var visitorsName = resultPerson[i]['firstName'] + ' ' + resultPerson[i]['lastName'];
+			resultLocations[locationRandom]['visitors'].push(visitorsName);
+		}
+
+
+		// Анализ ситуации
+		for (var i = 0; i < resultLocations.length; i++) {
+
+			if (resultLocations[i]['name'] == 'school') {
+				console.log(resultLocations[i]['visitors'] + ' are pupils');
+			} else if (resultLocations[i]['name'] == 'park') {
+				console.log(resultLocations[i]['visitors'] + ' are walking')
+			} else if (resultLocations[i]['name'] == 'swimmingpool') {
+				console.log(resultLocations[i]['visitors'] + ' are swimming')
+			} else if (resultLocations[i]['name'] == 'hospital') {
+				console.log(resultLocations[i]['visitors'] + ' are doctors')
+			} else if (resultLocations[i]['name'] == 'shop') {
+				console.log(resultLocations[i]['visitors'] + ' are shopping')
+			} else if (resultLocations[i]['name'] == 'zoo') {
+				console.log(resultLocations[i]['visitors'] + ' like animals')
+			} else if (resultLocations[i]['name'] == 'work') {
+				console.log(resultLocations[i]['visitors'] + ' are working')
+			} else if (resultLocations[i]['name'] == 'bar') {
+				console.log(resultLocations[i]['visitors'] + ' want to get drunk')
+			} else if (resultLocations[i]['name'] == 'cafe') {
+				console.log(resultLocations[i]['visitors'] + ' are having dinner')
+			} 
+
+			var owners = resultLocations[i]['owner']['firstName'] + ' ' +resultLocations[i]['owner']['lastName'];
+				
+			for (var visitorsIndex = 0; visitorsIndex < resultLocations[i]['visitors'].length; visitorsIndex++) {
+
+				var visitorName = resultLocations[i]['visitors'][visitorsIndex];
+
+				if ( (owners == visitorName) && (resultLocations[i]['visitors'].length == 2) ) {
+					console.log(resultLocations[i]['visitors'] + ' are more than friends');
+				} else if (owners == visitorName) {
+					console.log(resultLocations[i]['visitors'][visitorsIndex] + ' is owner of ' + resultLocations[i]['name']);
+				} 
+			}
+		}
+	</script>
+</head>
+<body>
+</body>
+</html>

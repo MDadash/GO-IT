@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>formatCurrency</title>
+	<script>
+		Number.prototype.formatCurrency = function () {
+			
+			var isNegative = false;
+
+			if (this < 0) {
+				isNegative = this;
+			} 
+
+			var cuttedNumbers = (Math.abs(this)).toFixed(2).split(".");
+			var numbersToCut = [];
+			
+			for (var i = cuttedNumbers[0].length; i > 0; i -= 3) {
+				if (i < 3) {
+					var sliceLength = i;
+				} else {
+					var sliceLength = 3;
+
+				}
+				numbersToCut.unshift(cuttedNumbers[0].slice((i-sliceLength), (i)));
+				
+			}
+
+			var result = numbersToCut.join(',');
+
+			if (isNegative) {
+				return '-$' + result + '.' + cuttedNumbers[1];
+			} else {
+				return '$' + result + '.' + cuttedNumbers[1];
+			}
+			
+		}
+		console.log((-14000000).formatCurrency())
+		console.log((5.5).formatCurrency() === "$5.50");
+		console.log((-11005.5).formatCurrency() === "-$11,005.50");
+		console.log((0).formatCurrency() === "$0.00");
+		console.log((-1).formatCurrency() === "-$1.00");
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

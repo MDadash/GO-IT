@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assign</title>
+	<script>
+		function MyFunctionAssignObjects() {
+			var target = arguments[0];
+			var sources;
+			for ( var i = 1; i < arguments.length; i++) {
+				sources = arguments[i];
+				if (sources == null || sources == undefined) {
+					sources = {};
+				} 
+				if (typeof(sources) == 'string') {
+					sources = new String(sources);
+				}
+				
+				for (var key in sources) {
+					if (key in sources) {
+						if (sources.propertyIsEnumerable(key) == false) {
+							sources[key] = {};
+						} else {
+							target[key] = sources[key];
+						}
+					}
+				}
+			}
+			return target;
+		}
+
+		
+		var obj = Object.create({foo: 1}, { bar:{value: 2}, baz:{value: 3, enumerable:true} });
+
+
+		console.log(MyFunctionAssignObjects({}, { name: 'Vasya' }, { surName: 'Pupkin' }), Object.assign({}, { name: 'Vasya' }, { surName: 'Pupkin' }));
+		console.log(MyFunctionAssignObjects({ age: 25 }, { name: 'Vasya' }, { surName: 'Pupkin' }), Object.assign({ age: 25 }, { name: 'Vasya' }, { surName: 'Pupkin' }));
+		console.log(MyFunctionAssignObjects( { a: 1 }, { b: 2 }, { c: 2 }), Object.assign( { a: 1 }, { b: 2 }, { c: 2 }));
+		console.log(MyFunctionAssignObjects({}, '123', true, null, 10, undefined), Object.assign({}, '123', true, null, 10, undefined));
+		console.log(MyFunctionAssignObjects({}, obj), Object.assign({}, obj));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -6,7 +6,7 @@
 	<script>
 		var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 		function findIndexOfElement (array, element, fromIndex) {
-			if (fromIndex == isNaN || fromIndex == undefined) {
+			if (isNaN(fromIndex) || fromIndex == undefined) {
 				fromIndex = 0;
 			} else if (fromIndex < 0) {
 				fromIndex = array.length + fromIndex;

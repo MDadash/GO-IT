@@ -13,7 +13,7 @@
 			if (begin == undefined && end == undefined) {
 				begin = 0;
 				end = array.length;
-			} else if (begin == isNaN || begin == undefined || (begin < 0 && Math.abs(begin) > array.length)) {
+			} else if (isNaN(begin) || begin == undefined || (begin < 0 && Math.abs(begin) > array.length)) {
 				begin = 0;
 			} else if (begin < 0 && end == undefined) {
 				begin = array.length + begin;

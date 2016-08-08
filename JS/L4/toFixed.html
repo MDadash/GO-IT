@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ToFixed</title>
+	<script>
+		function myFunctiontoFixed(number, digits) {
+			if ((number.toString()).includes('e-')) {
+				var negativeExponenta = number.toString().split('e');
+				number = 0;
+			}
+
+			var splitedNumber = number.toString().split('.');
+
+			var fractionalPart = false;
+			var integerPart = splitedNumber[0];
+			if (splitedNumber[1]) {
+				fractionalPart = splitedNumber[1];
+			}
+
+			if (fractionalPart.length > digits) {
+				var firstPart;
+				var secondPart;
+				
+				for (var i = fractionalPart.length-1; i > 0; i--) {
+					firstPart = fractionalPart.substring(0, i);
+					secondPart = fractionalPart.substring(i, i+1);
+					if (secondPart >=5) {
+						firstPart = +firstPart + 1 + '0';
+						secondPart = '0';
+						fractionalPart = firstPart + secondPart;
+					}
+				}
+			}
+
+			if (digits && fractionalPart) {
+				fractionalPart = fractionalPart.slice(0, digits);
+			} 
+			if (digits && fractionalPart.length < digits) {
+				for ( var i = fractionalPart.length; i < digits; i++) {
+					fractionalPart = fractionalPart + '0';
+				}
+			} else if (digits && fractionalPart == false) {
+					fractionalPart = '';
+					for ( var i = 0; i < digits; i++) {
+					fractionalPart = fractionalPart + '0';
+					}
+			}
+			if (digits == false || digits == undefined) {
+				if (fractionalPart[0] > 5) {
+					return +integerPart + 1 + '';
+				}
+				return integerPart;
+			}
+			
+
+			return integerPart + '.' + fractionalPart;
+		}
+
+
+		var numObj = 12345.6789;
+
+		console.log(myFunctiontoFixed(numObj), numObj.toFixed());
+		console.log(myFunctiontoFixed(numObj, 1), numObj.toFixed(1));
+		console.log(myFunctiontoFixed(numObj, 6), numObj.toFixed(6));
+		console.log(myFunctiontoFixed((1.23e+20), 2), (1.23e+20).toFixed(2));
+		console.log(myFunctiontoFixed((1.23e-10), 2), (1.23e-10).toFixed(2));
+		console.log(myFunctiontoFixed(2.34, 1), 2.34.toFixed(1));
+		console.log(myFunctiontoFixed((-2.36), 1), (-2.36).toFixed(1));
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

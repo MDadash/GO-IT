@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>balance</title>
+	<script>
+		[].__proto__.balance = function () {
+			
+			var result = {};
+			for (i = 0; i < this.length; i++) {
+				if (this[i+1] == undefined) {
+					return result = this[i];
+				}
+				for (var key in this[i]) {
+					if (key in this[i+1]) {
+						result[key] = this[i+1][key] + this[i][key];
+					} else {
+						result[key] =  this[i][key];
+					}
+				}
+				return result;
+			}
+		}
+		console.log([{in:0, out:0}].balance());
+		console.log([{in:1, out:-1}, {in:100, out: 100}].balance());
+		console.log([{in:100, out:100500}, {in:-100}].balance());
+		console.log([{in:100, out:100500, for: 200}, {in:-100, for: -50}].balance())
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
