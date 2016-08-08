@@ -16,7 +16,7 @@
 			lastNamesArray.push(personsArray[i]["Default Contact Last name"]);
 		}
 		
-		var resultPerson = [];
+		var resultPersons = [];
 		var resultLocations = [];
 			
 		function Person(firstName, lastName, gender) {
@@ -35,6 +35,8 @@
 			location: 'location',
 			walkTo: function(location) {
 				this.location = location;
+				var visitorsName = this.firstName + ' ' + this.lastName;
+				location['visitors'].push(visitorsName);
 			}
 		}
 
@@ -42,29 +44,25 @@
 			var nameRandom = Math.floor(Math.random() * firstNamesArray.length);
 			var genderRandom = Math.floor(Math.random() * genderArray.length);
 			
-			resultPerson[i] = new Person(firstNamesArray[nameRandom], lastNamesArray[nameRandom], genderArray[genderRandom]);
+			resultPersons[i] = new Person(firstNamesArray[nameRandom], lastNamesArray[nameRandom], genderArray[genderRandom]);
 
 			firstNamesArray.splice(nameRandom, 1);
 			lastNamesArray.splice(nameRandom, 1);
 		}
-		// console.log(resultPerson);
+		console.log(resultPersons);
 
 		for (var i = 0; i < 10; i++) {
 			var locationRandom = Math.floor(Math.random() * locationsArray.length);
-			var ownerRandom = Math.floor(Math.random() * resultPerson.length);
-			resultLocations[i] = new Location(locationsArray[locationRandom], resultPerson[ownerRandom])
+			var ownerRandom = Math.floor(Math.random() * resultPersons.length);
+			resultLocations[i] = new Location(locationsArray[locationRandom], resultPersons[ownerRandom])
 			locationsArray.splice(locationRandom, 1);
 		}
 		console.log(resultLocations);
 
 		for (var i = 0; i < 50; i++)  {
 			var locationRandom = Math.floor(Math.random() * resultLocations.length)
-			var walkToLocation = resultLocations[locationRandom]['name'];
-			resultPerson[i].walkTo(walkToLocation);
-			var visitorsName = resultPerson[i]['firstName'] + ' ' + resultPerson[i]['lastName'];
-			resultLocations[locationRandom]['visitors'].push(visitorsName);
+			resultPersons[i].walkTo(resultLocations[locationRandom]);
 		}
-
 
 		// Анализ ситуации
 		for (var i = 0; i < resultLocations.length; i++) {
@@ -89,7 +87,7 @@
 				console.log(resultLocations[i]['visitors'] + ' are having dinner')
 			} 
 
-			var owners = resultLocations[i]['owner']['firstName'] + ' ' +resultLocations[i]['owner']['lastName'];
+			var owners = resultLocations[i]['owner']['firstName'] + ' ' + resultLocations[i]['owner']['lastName'];
 				
 			for (var visitorsIndex = 0; visitorsIndex < resultLocations[i]['visitors'].length; visitorsIndex++) {
 
