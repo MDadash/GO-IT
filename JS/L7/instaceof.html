@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>InstanceOf</title>
+	<script>
+		function operatorNew(clazz, options) {
+			var obj = {};
+			obj.__proto__ = clazz.prototype;
+			clazz.apply(obj, options);
+			
+			if (obj.__proto__.constructor == undefined) {
+				obj.__proto__.constructor = clazz;
+			}
+			return obj;
+		}
+		
+		function isInstanceOf(instance, clazz) {
+			var obj = instance;
+			if (obj.__proto__ == clazz.prototype) {
+				return true;
+			} 
+			while (obj = obj.__proto__) {
+				if (obj.__proto__ == clazz.prototype) {
+					return true;
+				} 
+			}
+			
+			return false;
+		}
+
+		function Person() {}
+		function XXX() {}
+
+		var x = operatorNew(Person, []);
+		
+		if (x instanceof Person === true) {
+			console.log("GOOD");
+		} else {
+			console.log("BADDDD");
+		}
+
+		if (x instanceof Object === true) {
+			console.log("GOOD");
+		} else {
+			console.log("BADDDD");
+		}
+
+		if (operatorNew(XXX, {}) instanceof Person === false) {
+			console.log("GOOD");
+		} else {
+			console.log("BADDDD");
+		}
+
+		console.log(isInstanceOf(x, Person) === true);
+		console.log(isInstanceOf(x, Object) === true);
+		console.log(isInstanceOf(x, XXX) === false);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
