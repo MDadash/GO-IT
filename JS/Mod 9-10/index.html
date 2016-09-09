@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Module 9-10</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/carousel-style.css">
+	<link rel="stylesheet" href="css/selectbox.css">
+	<link rel="stylesheet" href="css/checkbox-style.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	<script src="script/jquery.jcarousel.js"></script>
+	<script src="script/jcarousel-setup.js"></script>
+	<script src="script/jquery.selectbox-0.6.1.js"></script>
+	<script src="script/jquery.checkbox.js"></script>
+	<script src="script/jquery.menu.js"></script>
+	
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<nav>
+				<ul class="main-menu">
+					<li class="main-menu__item"><a href="#">Главная</a></li>
+					<li class="main-menu__item drop_box">
+						<a href="#">Континент</a>
+						<ul class="submenu">
+							<li><a href="#">Африка</a></li>
+							<li><a href="#">Австралия</a></li>
+							<li class="drop_box drop_box-level-2"><a href="#">Евразия</a>
+								<ul>
+									<li><a href="#">Европа</a></li>
+									<li><a href="#">Азия</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Северная Америка</a></li>
+							<li><a href="#">Южная Америка</a></li>
+							<li><a href="#">Антарктида</a></li>
+						</ul>
+					</li>
+					<li class="main-menu__item"><a href="#">Галерея</a></li>
+					<li class="main-menu__item"><a href="#">Блог</a></li>
+					<li class="main-menu__item"><a href="#">О нас</a></li>
+					<li class="main-menu__item"><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div class="jcarousel-wrapper">
+				<div class="jcarousel">
+					<ul>
+						<li>
+							<a href=""><img src="img/animal(1).jpg" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="img/animal(2).jpg" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="img/animal(3).jpg" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="img/animal(4).jpg" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="img/animal(5).jpg" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="img/animal(6).jpg" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="img/animal(7).jpg" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="img/animal(8).jpg" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="img/animal(9).jpg" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="img/animal(10).jpg" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="img/animal(11).jpg" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="img/animal(12).jpg" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="img/animal(13).jpg" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="img/animal(14).jpg" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="img/animal(15).jpg" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="img/animal(16).jpg" alt=""></a>
+						</li>
+					</ul>
+				</div>
+
+				<a class="jcarousel-control-prev" href="#">&lsaquo;</a>
+				<a class="jcarousel-control-next" href="#">&rsaquo;</a>
+
+				<p class="jcarousel-pagination"></p>
+			</div>
+			<form action="#" method="post">
+				<div class="select-wrapper">
+					<select id="default-usage-select">
+						<option value="--">Какое из этих животных ваше любимое?</option>
+						<option value="01">Морской котик</option>
+						<option value="02">Гепард</option>
+						<option value="03">Бурундук</option>
+						<option value="04">Утенок</option>
+						<option value="05">Поросенок</option>
+						<option value="06">Лиса</option>
+						<option value="07">Сова</option>
+						<option value="08">Собака</option>
+						<option value="09">Жираф</option>
+						<option value="10">Медведь</option>
+						<option value="11">Слон</option>
+						<option value="12">Хомяк</option>
+						<option value="13">Бегемот</option>
+						<option value="14">Попугай</option>
+					</select>
+				</div>
+				<div class="checkbox-wrapper">
+					<div class="checkbox-js">
+						<h1>Какие фотографии Вам понравились?</h1>
+						<span class="checkbox-js__input-wrapper">
+							<label>
+								<input type="checkbox" name="photo1" value="off">
+								1
+							</label>
+						</span>
+						<span class="checkbox-js__input-wrapper">
+							<label>
+								<input type="checkbox" name="photo2" value="off">
+								2
+							</label>
+						</span>
+						<span class="checkbox-js__input-wrapper">
+							<label>
+								<input type="checkbox" name="photo3" value="off">
+								3
+							</label>
+						</span>
+						<span class="checkbox-js__input-wrapper">
+							<label>
+								<input type="checkbox" name="photo4" value="off">
+								4
+							</label>
+						</span>
+						<span class="checkbox-js__input-wrapper">
+							<label>
+								<input type="checkbox" name="photo5" value="off">
+								5
+							</label>
+						</span>
+						<span class="checkbox-js__input-wrapper">
+							<label>
+								<input type="checkbox" name="photo6" value="off">
+								6
+							</label>
+						</span>
+						<span class="checkbox-js__input-wrapper">
+							<label>
+								<input type="checkbox" name="photo7" value="off">
+								7
+							</label>
+						</span>
+						<span class="checkbox-js__input-wrapper">
+							<label>
+								<input type="checkbox" name="photo8" value="off">
+								8
+							</label>
+						</span>
+						<span class="checkbox-js__input-wrapper">
+							<label>
+								<input type="checkbox" name="photo9" value="off">
+								9
+							</label>
+						</span>
+						<span class="checkbox-js__input-wrapper">
+							<label>
+								<input type="checkbox" name="photo10" value="off">
+								10
+							</label>
+						</span>
+						<span class="checkbox-js__input-wrapper">
+							<label>
+								<input type="checkbox" name="photo11" value="off">
+								11
+							</label>
+						</span>
+						<span class="checkbox-js__input-wrapper">
+							<label>
+								<input type="checkbox" name="photo12" value="off">
+								12
+							</label>
+						</span>
+						<span class="checkbox-js__input-wrapper">
+							<label>
+								<input type="checkbox" name="photo13" value="off">
+								13
+							</label>
+						</span>
+						<span class="checkbox-js__input-wrapper">
+							<label>
+								<input type="checkbox" name="photo14" value="off">
+								14
+							</label>
+						</span>
+						<span class="checkbox-js__input-wrapper">
+							<label>
+								<input type="checkbox" name="photo15" value="off">
+								15
+							</label>
+						</span>
+						<span class="checkbox-js__input-wrapper">
+							<label>
+								<input type="checkbox" name="photo16" value="off">
+								16
+							</label>
+						</span>
+					</div>
+					<div class="checkbox-css">
+						<h1>Какие фотографии Вам не понравились?</h1>
+						<div>
+							<input type="checkbox" id="check1" value="off">
+							<label for="check1">1</label>
+						</div>
+						<div>
+							<input type="checkbox" id="check2" value="off">
+							<label for="check2">2</label>
+						</div>
+						<div>
+							<input type="checkbox" id="check3" value="off">
+							<label for="check3">3</label>
+						</div>
+						<div>
+							<input type="checkbox" id="check4" value="off">
+							<label for="check4">4</label>
+						</div>
+						<div>
+							<input type="checkbox" id="check5" value="off">
+							<label for="check5">5</label>
+						</div>
+						<div>
+							<input type="checkbox" id="check6" value="off">
+							<label for="check6">6</label>
+						</div>
+						<div>
+							<input type="checkbox" id="check7" value="off">
+							<label for="check7">7</label>
+						</div>
+						<div>
+							<input type="checkbox" id="check8" value="off">
+							<label for="check8">8</label>
+						</div>
+						<div>
+							<input type="checkbox" id="check9" value="off">
+							<label for="check9">9</label>
+						</div>
+						<div>
+							<input type="checkbox" id="check10" value="off">
+							<label for="check10">10</label>
+						</div>
+						<div>
+							<input type="checkbox" id="check11" value="off">
+							<label for="check11">11</label>
+						</div>
+						<div>
+							<input type="checkbox" id="check12" value="off">
+							<label for="check12">12</label>
+						</div>
+						<div>
+							<input type="checkbox" id="check13" value="off">
+							<label for="check13">13</label>
+						</div>
+						<div>
+							<input type="checkbox" id="check14" value="off">
+							<label for="check14">14</label>
+						</div>
+						<div>
+							<input type="checkbox" id="check15" value="off">
+							<label for="check15">15</label>
+						</div>
+						<div>
+							<input type="checkbox" id="check16" value="off">
+							<label for="check16">16</label>
+						</div>
+					</div>
+				</div>
+				<button type="submit">Отправить</button>
+			</form>
+		</main>
+	</div>
+</body>
+</html>
