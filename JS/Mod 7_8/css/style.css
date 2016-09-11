@@ -1,51 +1,83 @@
-* {
-	margin: 0;
-	padding: 0;
+html, body {
+	height: 100%;
+}
+.wrapper {
+	height: 100%;
+	padding-top: 30px;
+  background-image: url(../img/wood_pattern.jpg);
+  font-family: arial;
 }
 
 /*tabs styles*/
-
 .tabs {
-	width: 90%;
-	margin: 30px auto;
+	width: 80%;
+	margin: 0 auto;
+	background: #fffaf6;
+  border-radius: 4px;
+  color: #7e7975;
+  box-shadow:
+    0 2px 2px rgba(0,0,0,0.2),       
+    0 1px 5px rgba(0,0,0,0.2),       
+    0 0 0 12px rgba(255,255,255,0.4);
 }
-.tabs__ul{
-	background: darkgrey;
+.tabs__ul {
+	text-align: center;
+	padding: 0 10px;
+	background-image: linear-gradient(to bottom left, #F0B7A1 0%, #BF6E4E 15%, #8C3310 35%, #752201 100%);
 	border: solid 1px grey;
-	border-radius: 1px;	
+	border-radius: 5px;	
 }
 .tabs__ul__li {
 	list-style: none;
 	display: inline-block;
-	margin: 5px 0 0;
-	border: solid 1px grey;
-	border-bottom: none;
-	border-radius: 1px;
-	background: lightgrey;
+	margin: 1% 1%;
+	background: linear-gradient(#34a5cf, #2a8ac4);
+  border: 1px solid #2b8bc7;
+	text-shadow: 0 -1px rgba(0,0,0,0.3);
+	box-shadow: inset 0 1px rgba(255,255,255,0.3);
+  border-radius: 3px;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+}
+.tabs__ul__li:hover {
+	background: #2a8ac4;
 }
 .tabs__ul__li__a {
 	display: inline-block;
-	padding: 5px;
+	padding: 7px 15px;
 	text-decoration: none;
+	color: #ffffff;
 }
-.content {
-	padding: 5px;
-	border: 1px solid grey;
-	border-top: none;
+.tabs__ul__li-active {
+	background: linear-gradient(#fbd568, #ffb347);
+  border: 1px solid #f4ab4c;
+  text-shadow: 0 1px rgba(255,255,255,0.3);
 }
-.active {
-	background: blue;
+.tabs__ul__li-active a {
+	color: #996319;
+	padding: 12px 20px;
+}
+.tabs__ul__li-active:hover {
+	background: #ffb347;
+}
+.tabs__content {
+	padding: 20px;
 }
 
 /*form styles*/
-
 .form {
-	width: 50%;
-	margin: 0 auto;
-	padding: 5px;
-}
-.form__frame {
-	border: solid 1px black;
+	width: 340px;
+  margin: 50px auto 0;
+  padding: 15px;
+  background: #fffaf6;
+  border-radius: 4px;
+  color: #7e7975;
+  box-shadow:
+    0 2px 2px rgba(0,0,0,0.2),       
+    0 1px 5px rgba(0,0,0,0.2),       
+    0 0 0 12px rgba(255,255,255,0.4);
 }
 .form__element {
 	margin: 15px;
@@ -53,14 +85,57 @@
 .form__element__label {
 	display: inline-block;
 	width: 80px;
+	cursor: pointer;
 }
-button {
-	display: block;
-	padding: 5px 10px;
-	margin: 10px auto;
+.form__element__input {
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 3px solid #ebe6e2;
+  border-radius: 5px;
+  transition: all 0.3s ease-out;
 }
-button:hover {
-	cursor:pointer;
+.form__element__input:hover {
+  border-color: #CCC;
+}
+.form__element__input:focus {
+	  border-color: #BBB;
+    outline: none;
+}
+.form__element__buttons {
+	width: 48%;
+  height: 38px;
+  position: relative;
+	box-shadow: inset 0 1px rgba(255,255,255,0.3);
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 38px;
+  text-align: center;
+  font-weight: bold;
+}
+.form__element__buttons:first-of-type {
+  margin-left: 1%;
+  background: linear-gradient(#fbd568, #ffb347);
+  border: 1px solid #f4ab4c;
+  color: #996319;
+  text-shadow: 0 1px rgba(255,255,255,0.3);
+}
+.form__element__buttons:last-of-type {
+  margin-right: 1%;
+  background: linear-gradient(#34a5cf, #2a8ac4);
+  border: 1px solid #2b8bc7;
+  color: #ffffff;
+  text-shadow: 0 -1px rgba(0,0,0,0.3);
+}
+.form__element__buttons:first-of-type:hover {
+	background: #ffb347;
+}
+.form__element__buttons:last-of-type:hover {
+	background: #2a8ac4;
+}
+.form__element__buttons:active {
+  top: 1px;
 }
 .form__element__tooltips {
 	display:inline-block;
@@ -70,4 +145,5 @@ button:hover {
 	padding: 5px;
 	border: 1px solid lightgrey;
 	box-shadow: 0 0 5px 1px grey;
+	background:  #fffaf6;
 }
