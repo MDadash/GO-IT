@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home work JS #11-12</title>
+	<link  rel="stylesheet" href="css/style.css">
+		<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+		<script src="script/tmpl.js"></script>
+		<script src="script/script.js"></script>
+</head>
+<body>
+	<script type="text/template" id="profile">
+		<div class="container">
+			<h2><%= name %></h2>
+			<div class="imgWrap">
+				<img src="img/IMG_1.jpg" alt="My photo" title="My photo">
+			</div>
+			<div class="box">
+				<p><%= profession %></p>
+			</div>
+			<div class="box">
+				<p>Хочу учить фронтенд, потому что</p>
+				<ul>
+					<% for (var i = 0; i < answers.length; i++) { %>
+					<li><%= answers[i] %></li>
+					<% }; %>
+				</ul>
+			</div>
+			<div class="box p_align">
+				<p>Мой контактный телефон</p>
+				<p><a href="tel:<%= phoneNumber %>"><%= phoneNumber %></a></p>
+				<p>Мой профиль facebook</p>
+				<p><a href="https://<%= profileFb %>"><%= profileFb %></a></p>
+			</div>
+			<div class="box p_align">
+				<p>Мой фидбэк:</p>
+				<p><%= feedback %></p>
+			</div>
+		</div>
+	</script>
+</body>
+</html>
