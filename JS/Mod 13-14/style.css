@@ -1,0 +1,57 @@
+html, body {
+	height: 100%;
+	background: ghostwhite;
+	padding: 10px;
+}
+.answers__label:hover {
+	cursor: pointer;
+}
+.answers__checkbox {
+	cursor: pointer;
+}
+.test-wrapper {
+	width: 700px;
+	border: 3px solid darkorange;
+	border-radius: 5px;
+	padding: 10px;
+	background: white;
+}
+ .modal-parent {
+ 	display: none;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.5);
+}
+.modal-window {
+	width: 320px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	padding: 10px;
+	margin: -100px 0 0 -160px;
+	border: 3px solid darkgrey;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 1);
+}
+.close-modal {
+	cursor: pointer;
+	text-align: right;
+	padding: 0;
+	margin: 0;
+}
+.mw-header {
+	padding: 0 15px 15px;
+	border-bottom: 1px solid lightgrey;
+}
+.mw-body {
+	padding: 20px 15px;
+	text-align: center;
+	border-bottom: 1px solid lightgrey;
+}
+.mw-footer {
+	text-align: center;
+	padding: 15px 0 0;
+}
