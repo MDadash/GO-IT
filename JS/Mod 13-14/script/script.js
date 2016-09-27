@@ -3,6 +3,7 @@
 var checkboxes;
 var answers = [];
 var correctAnswers = 0;
+var qwRightWrong = [];
 
 function saveToLoacalStorage () {
 	var dataStr = JSON.stringify(testContent);
@@ -26,8 +27,8 @@ render();
 function check () {
 	var questions = document.querySelectorAll('.questions');
 	var labels = document.querySelectorAll('.answers__label');
-	checkboxes = document.querySelectorAll('.answers__checkbox');
-
+	checkboxes = document.querySelectorAll('.answers__radio');
+	
 	for (var i = 0; i < questions.length; i++) {
 		var obj = {};
 		for (var j = 0; j < (labels.length/questions.length); j++) {
@@ -44,9 +45,7 @@ function check () {
 	for (var i = 0; i < answers.length; i++) {
 		var answISize = 0;
 		for (var key in answers[i]) {
-			if (answers[i].hasOwnProperty(key)) {
-				answISize++;
-			}
+			answISize++;
 		}
 		if (answISize == 1) {
 			for (var key in answers[i]) {
@@ -56,17 +55,20 @@ function check () {
 						propMatch = true;
 					} else {
 						propMatch = false;
+						qwRightWrong.push({[i+1]: 'неправильный'});
 					}	
 				}
 				if (propMatch) {
 					correctAnswers ++;
+					qwRightWrong.push({[i+1]: 'правильный'});
 				}
 			}
+		} else {
+			qwRightWrong.push({[i+1]: 'неправильный'});
 		}
 	}
 
-viewModal();
-
+	viewModal();
 }
 
 function viewModal () {
@@ -75,7 +77,19 @@ function viewModal () {
 		document.querySelector('#end-test').classList.remove('btn-danger');
 		document.querySelector('#end-test').classList.add('btn-success');
 	} else {
-		document.querySelector('.mw-body').innerHTML = 'Тест не пройден! Вы допустили ошибку!';
+		var html = '<p>Тест не пройден! Вы допустили ошибку!</p>';
+		for (var i = 0; i < qwRightWrong.length; i++) {
+			for (var key in  qwRightWrong[i]) {
+				if (qwRightWrong[i][key] == 'неправильный') {
+					html += '<p class="wrong">Ответ на вопрос ' + key + ' <b>' +  qwRightWrong[i][key] +'</b></p>'
+				} else {
+					html += '<p class="correct">Ответ на вопрос ' + key + ' <b>' +  qwRightWrong[i][key] +'</b></p>'
+				}
+			}
+		}
+		html += '<p>Всего правильных ответов <b>' + correctAnswers + '</b>.</p>';
+
+		document.querySelector('.mw-body').innerHTML = html;
 		document.querySelector('#end-test').classList.remove('btn-success');
 		document.querySelector('#end-test').classList.add('btn-danger');
 	}
@@ -97,6 +111,7 @@ document.querySelector('.close-modal').onclick = function () {
 	}
 	answers = [];
 	correctAnswers = 0;
+	qwRightWrong = [];
 }
 
 document.querySelector('#end-test').onclick = function () {
@@ -106,4 +121,5 @@ document.querySelector('#end-test').onclick = function () {
 	}
 	answers = [];
 	correctAnswers = 0;
+	qwRightWrong = [];
 }

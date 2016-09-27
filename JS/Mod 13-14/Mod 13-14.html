@@ -32,7 +32,7 @@
 							<% if (key != 'name') { %>
 								<li class="answers">
 									<label class="answers__label">
-										<input class="answers__checkbox" type="checkbox"><%= data[i][key].text %></label>
+										<input class="answers__radio" type="radio" name="qw<%= i %>"><%= data[i][key].text %></label>
 								</li>
 							<% } %>
 						<% }; %>
