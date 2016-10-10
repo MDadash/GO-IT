@@ -1,0 +1,55 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.search-wrap {
+	padding: 20px;
+	margin-bottom: 10px;
+	background: #f1f1f1;
+	border-bottom: 1px solid #e5e5e5;
+	overflow: hidden;
+}
+.logo {
+	height: 37px;
+	width: auto;
+	float: left;
+	margin-right: 15px;
+}
+form {
+	float: left;
+	width: 580px;
+	height: 35px;
+}
+input[name="imgsearch"] {
+	height: 35px;
+	padding-left: 10px;
+	padding-right: 35px;
+	width: 100%;
+}
+input[type="image"] {
+	height: 34px;
+	left: 545px;
+	top: -35px;
+	padding: 5px;
+	position: relative;
+	vertical-align: middle;
+	width: 34px;
+	background: #4285f4;
+}
+.img-container {
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+img {
+	max-height: 180px;
+
+}
+.img-container a {
+	width: auto;
+	margin: 5px;
+
+}
+
