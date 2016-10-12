@@ -1,0 +1,25 @@
+{
+  "name": "hw_mod_17-18",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "glob-html": "^0.2.5",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-buildfiles": "^0.3.7",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-express": "^1.4.1",
+    "grunt-image": "^2.2.1",
+    "grunt-parallel": "^0.5.1",
+    "grunt-useref": "0.0.16"
+  }
+}
