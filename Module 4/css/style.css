@@ -129,7 +129,7 @@ li.drop_box ul {
 	display: none;
 	position: absolute;
 	background-image: linear-gradient(to bottom, #373737 0%, #303030 100%);
-	top: 31px;
+	top: 100%;
 	left: 30px;
 	width: 100%;
 	padding: 0;
