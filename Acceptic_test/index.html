@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Registration</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="script/object_hash.js" type="text/javascript"></script>
+	<script src="script/script.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="fixedcontainer">
+			<header class="header">
+				<div class="container container--header">
+					<div>
+						<a href="#"><img src="img/logo-black.png" class="header__logo" alt="logo"></a>
+					</div>
+
+					<form class="login">
+						<div class="login__input-container">
+							<input type="email" id="login-email"  placeholder="Email" required class="login__input">
+						</div>
+						<div class="login__input-container">
+							<input type="password" id="login-password" placeholder="Password" required class="login__input">
+						</div>
+						<input type="submit" value="Sign in" class="login__submit login__submit--signin">
+					</form>
+					<button type="button" class="login__submit login__submit--signout">Sign out</button>
+				</div>
+			</header>
+			<div class="menu-wrapper">
+				<nav class="menu container">
+					<a href="#" class="menu__item">Home</a>
+					<a href="#" class="menu__item menu__item--active">Profile</a>
+					<a href="#" class="menu__item">Messages</a>
+					<a href="#" class="menu__item">Friends</a>
+					<a href="#" class="menu__item">Settings</a>
+				</nav>
+			</div>
+
+			<main class="content">
+				<div class="container container--content">
+					<div class="content__regstrn__wrapper">
+						<div class="content__regstrn-head">
+							<p>Registraition</p>
+						</div>
+						<div class="content__regstrn-body">
+							<form>
+								<div class="content__regstrn-body__input-container">
+									<input type="text" name="First name" placeholder="First Name" required id="content__regstrn__first-name" class="content__regstrn-body__input">
+								</div>
+								<div class="content__regstrn-body__input-container">
+									<input type="text" name="Last name" placeholder="Last Name" required id="content__regstrn__last-name" class="content__regstrn-body__input">
+								</div>
+								<div class="content__regstrn-body__input-container">
+									<input type="email" name="email" placeholder="Email Address" required id="content__regstrn__email" class="content__regstrn-body__input">
+								</div>
+								<div class="content__regstrn-body__input-container">
+									<input type="password" name="password" placeholder="Choose Password" required id="content__regstrn__password" class="content__regstrn-body__input">
+								</div>
+								<div class="content__regstrn-body__input-container">
+									<input type="password" name="password confirm" placeholder="Password Confirm" required id="content__regstrn__password-confirm" class="content__regstrn-body__input">
+								</div>
+								<button type="submit" class="regstrn__submit">
+									Create my Account
+								</button>
+							</form>
+							<p class="content__regstrn-body__agreement">By clicking the button above, you agree to the Terms of Service Xiew our Privacy Policy
+							</p>
+						</div>
+					</div>
+					<div class="content__user-profile">
+						<h1 class="content__user-profile__title">Personal info</h1>
+						<div>
+							<h6 class="content__user-profile__info-category">First name:</h6>			
+							<p class="content__user-profile__info-value content__user-profile__firstname"> firstname</p>
+						</div>
+						<div>
+							<h6 class="content__user-profile__info-category">Last name:</h6>
+							<p class="content__user-profile__info-value content__user-profile__lastname"> lastname </p>
+						</div>
+						<div>
+							<h6 class="content__user-profile__info-category">Email:</h6>
+							<p class="content__user-profile__info-value content__user-profile__email"> email </p>
+						</div>
+						<div class="content__user-profile__editinfo"></div>
+						<button type="button" class="regstrn__submit button--add-info">Add Information</button>
+						<form class="content__user-profile__editinfo-form">
+							<button type="submit" class="regstrn__submit button--save-info">Save Information</button>	
+						</form>
+					</div>
+				</div>
+			</main>
+		</div>
+		<footer class="footer">	
+			<div class="container container--footer">
+				<img class="footer__logo" src="img/logo-black.png" alt="">
+				<div class="footer__copyright">
+					© 2016
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
